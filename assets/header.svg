@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">inuisaat-crypto — personal systems interface</title>
+  <title id="title">Fall1ar — personal systems interface</title>
   <desc id="desc">Animated monochrome blueprint grid, profile title, orbital reticle, and perimeter signal.</desc>
   <defs>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
@@ -30,9 +30,9 @@
   <path d="M48 54V42H72M1128 42H1152V66M48 294V318H72M1128 318H1152V294" stroke="#FFFFFF" stroke-width="1"/>
   <path d="M48 78H1152M48 280H1152" stroke="#FFFFFF" stroke-opacity=".18"/>
   <path class="coordinate" d="M48 72H1152M900 78V280" stroke="#FFFFFF" stroke-opacity=".36"/>
-  <text x="72" y="65" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="2">INUISAAT-CRYPTO  /  PROFILE SYSTEM</text>
+  <text x="72" y="65" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="2">FALLIAR  /  PROFILE SYSTEM</text>
   <text x="1128" y="65" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">BUILD  /  01</text>
-  <text x="72" y="157" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="42" font-weight="600" letter-spacing="-1.8">inuisaat-crypto</text>
+  <text x="72" y="157" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="42" font-weight="600" letter-spacing="-1.8">Fall1ar</text>
   <text x="74" y="193" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="13" letter-spacing=".15">SOFTWARE  /  AUTOMATION  /  SYSTEMS</text>
   <path d="M74 222H310" stroke="#777777"/>
   <circle cx="74" cy="222" r="2" fill="#FFFFFF"/>

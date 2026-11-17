@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the profile's telemetry, Omni metadata, and 60-day commit waveform."""
+"""Refresh profile telemetry, Omni metadata, and the 60-day contribution waveform."""
 
 import datetime
 import html
@@ -16,11 +16,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 API = "https://api.github.com"
-PAGE_SIZE = 100
-OMNI_DESCRIPTION = (
-    "Local desktop plugin manager built with Tauri v2, Rust, vanilla "
-    "HTML/CSS/JavaScript, and Python worker plugins."
-)
+CONTRIBUTIONS_QUERY = """
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    createdAt
+    contributionsCollection(from: $from, to: $to) {
+      restrictedContributionsCount
+      contributionCalendar {
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+          }
+        }
+      }
+    }
+  }
+}
+"""
+OMNI_DESCRIPTION = "No repository description set."
 
 
 class GitHubAPIError(RuntimeError):
@@ -52,6 +66,37 @@ def api_json(path, token):
         raise GitHubAPIError(error.code, path, detail) from error
 
 
+def graphql_json(query, variables, token):
+    request = urllib.request.Request(
+        API + "/graphql",
+        data=json.dumps({"query": query, "variables": variables}).encode(
+            "utf-8"
+        ),
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json",
+            "User-Agent": "profile-svg-updater",
+            "X-GitHub-Api-Version": "2022-11-28",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", "replace")
+        raise GitHubAPIError(error.code, "/graphql", detail) from error
+
+    if result.get("errors"):
+        raise RuntimeError(
+            "GitHub GraphQL query failed: {}".format(
+                json.dumps(result["errors"], ensure_ascii=True)
+            )
+        )
+    return result["data"]
+
+
 def github_date(value):
     value = re.sub(r"\.\d+", "", value)
     if value.endswith("Z"):
@@ -64,72 +109,33 @@ def github_date(value):
     ).astimezone(datetime.timezone.utc)
 
 
-def public_repositories(username, token):
-    repositories = []
-    page_number = 1
-    while True:
-        query = urllib.parse.urlencode(
-            {
-                "type": "owner",
-                "sort": "updated",
-                "per_page": PAGE_SIZE,
-                "page": page_number,
-            }
-        )
-        path = "/users/{}/repos?{}".format(
-            urllib.parse.quote(username, safe=""), query
-        )
-        page = api_json(path, token)
-        if not page:
-            return repositories
-        repositories.extend(page)
-        if len(page) < PAGE_SIZE:
-            return repositories
-        page_number += 1
-
-
-def public_commit_dates(username, repositories, since, until, token):
-    dates = []
-    since_value = since.strftime("%Y-%m-%dT%H:%M:%SZ")
-    until_value = until.strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    for repository in repositories:
-        full_name = repository["full_name"]
-        page_number = 1
-        while True:
-            query = urllib.parse.urlencode(
-                {
-                    "author": username,
-                    "since": since_value,
-                    "until": until_value,
-                    "per_page": PAGE_SIZE,
-                    "page": page_number,
-                }
+def contribution_data(username, start, end, token):
+    data = graphql_json(
+        CONTRIBUTIONS_QUERY,
+        {
+            "login": username,
+            "from": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "to": end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        },
+        token,
+    )
+    user = data.get("user")
+    if user is None:
+        raise RuntimeError(
+            "GitHub GraphQL did not return the requested user: {}".format(
+                username
             )
-            path = "/repos/{}/commits?{}".format(
-                urllib.parse.quote(full_name, safe="/"), query
-            )
-            try:
-                page = api_json(path, token)
-            except GitHubAPIError as error:
-                if (
-                    error.status_code == 409
-                    and "git repository is empty" in error.detail.lower()
-                ):
-                    print("Skipping empty public repository {}.".format(full_name))
-                    break
-                raise
-            for item in page:
-                commit = item.get("commit", {})
-                author = commit.get("author") or {}
-                committer = commit.get("committer") or {}
-                date_value = author.get("date") or committer.get("date")
-                if date_value:
-                    dates.append(github_date(date_value))
-            if len(page) < PAGE_SIZE:
-                break
-            page_number += 1
-    return dates
+        )
+
+    collection = user["contributionsCollection"]
+    daily_counts = {}
+    for week in collection["contributionCalendar"]["weeks"]:
+        for day in week["contributionDays"]:
+            day_date = datetime.date.fromisoformat(day["date"])
+            daily_counts[day_date] = day["contributionCount"]
+    return user["createdAt"], daily_counts, collection[
+        "restrictedContributionsCount"
+    ]
 
 
 def safe_text(value):
@@ -195,14 +201,16 @@ def replace_svg_lines(svg, element_id, value, width, max_lines=1):
     return updated
 
 
-def write_telemetry(account_age, repository_count, commits_year):
+def write_telemetry(account_age, repository_count, contributions_year):
     path = ASSETS / "telemetry.svg"
     svg = path.read_text(encoding="utf-8")
     svg = replace_svg_text(svg, "uptime", "{:,}".format(account_age))
     svg = replace_svg_text(
         svg, "repositories", "{:,}".format(repository_count)
     )
-    svg = replace_svg_text(svg, "commits", "{:,}".format(commits_year))
+    svg = replace_svg_text(
+        svg, "contributions", "{:,}".format(contributions_year)
+    )
     with path.open("w", encoding="utf-8") as output:
         output.write(svg)
 
@@ -253,17 +261,14 @@ def waveform_path(counts):
     return "M{:.1f} {:.1f}{}".format(left, baseline, "".join(points))
 
 
-def write_pulse(commit_dates, today):
+def write_pulse(daily_contributions, today):
     path = ASSETS / "pulse.svg"
     svg = path.read_text(encoding="utf-8")
     start_date = today - datetime.timedelta(days=59)
-    counts_by_day = {}
-    for commit_date in commit_dates:
-        day = commit_date.date()
-        if start_date <= day <= today:
-            counts_by_day[day] = counts_by_day.get(day, 0) + 1
     counts = [
-        counts_by_day.get(start_date + datetime.timedelta(days=offset), 0)
+        daily_contributions.get(
+            start_date + datetime.timedelta(days=offset), 0
+        )
         for offset in range(60)
     ]
 
@@ -298,7 +303,9 @@ def write_pulse(commit_dates, today):
     )
     if marker_count != 1:
         raise ValueError("Pulse peak marker group not found")
-    svg = replace_svg_text(svg, "total", "COMMITS / {}".format(sum(counts)))
+    svg = replace_svg_text(
+        svg, "total", "CONTRIBUTIONS / {}".format(sum(counts))
+    )
     svg = replace_svg_text(svg, "start-date", start_date.strftime("%d %b %Y"))
     svg = replace_svg_text(svg, "end-date", today.strftime("%d %b %Y"))
     with path.open("w", encoding="utf-8") as output:
@@ -306,28 +313,40 @@ def write_pulse(commit_dates, today):
 
 
 def main():
-    token = os.environ.get("GITHUB_TOKEN")
+    token = os.environ.get("GH_PAT") or os.environ.get("GITHUB_TOKEN")
     if not token:
-        raise RuntimeError("GITHUB_TOKEN is required to update profile assets")
+        raise RuntimeError("GH_PAT or GITHUB_TOKEN is required to update profile assets")
 
-    username = os.environ.get("PROFILE_USERNAME", "inuisaat-crypto")
+    if not os.environ.get("GH_PAT"):
+        print(
+            "GH_PAT is not set; GITHUB_TOKEN is being used. "
+            "Private contribution data may be incomplete."
+        )
+
+    username = os.environ.get("PROFILE_USERNAME", "Fall1ar")
     omni_repository = os.environ.get("OMNI_REPOSITORY", "Fall1ar/Omni")
     now = datetime.datetime.now(datetime.timezone.utc)
     today = now.date()
 
+    created_at_value, daily_contributions, restricted_contributions = (
+        contribution_data(
+            username,
+            now - datetime.timedelta(days=365),
+            now,
+            token,
+        )
+    )
     account = api_json(
         "/users/{}".format(urllib.parse.quote(username, safe="")), token
     )
-    repositories = public_repositories(username, token)
-    commit_dates = public_commit_dates(
-        username,
-        repositories,
-        now - datetime.timedelta(days=365),
-        now,
-        token,
-    )
-    created_at = github_date(account["created_at"])
+    created_at = github_date(created_at_value)
     account_age = (today - created_at.date()).days
+    year_start = today - datetime.timedelta(days=364)
+    contributions_year = sum(
+        count
+        for day, count in daily_contributions.items()
+        if year_start <= day <= today
+    )
 
     omni_path = "/repos/{}".format(
         urllib.parse.quote(omni_repository, safe="/")
@@ -344,14 +363,18 @@ def main():
     latest_commit = latest[0] if latest else None
 
     ASSETS.mkdir(parents=True, exist_ok=True)
-    write_telemetry(account_age, account.get("public_repos", 0), len(commit_dates))
+    write_telemetry(account_age, account["public_repos"], contributions_year)
     write_project(omni, latest_commit)
-    write_pulse(commit_dates, today)
+    write_pulse(daily_contributions, today)
 
     print(
-        "Updated telemetry for {}: {} public repositories, {} commits in the "
-        "last year; Omni metadata refreshed; pulse covers 60 days.".format(
-            username, account.get("public_repos", 0), len(commit_dates)
+        "Updated telemetry for {}: {} public repositories, {} contributions "
+        "in the last year ({} restricted/private); Omni metadata refreshed; "
+        "pulse covers 60 days.".format(
+            username,
+            account["public_repos"],
+            contributions_year,
+            restricted_contributions,
         )
     )
 

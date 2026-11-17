@@ -16,7 +16,7 @@
   <text x="44" y="42" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="11" letter-spacing="1.7">ACTIVE BLUEPRINT  /  OMNI</text>
   <circle class="activity" cx="1140" cy="37" r="4" fill="#FFFFFF"/>
   <text x="56" y="104" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="28">Omni</text>
-  <text id="description" x="58" y="132" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Local desktop plugin manager built with Tauri v2, Rust, vanilla HTML/CSS/JavaScript, and Python worker plugins.</text>
+  <text id="description" x="58" y="132" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">No repository description set.</text>
   <path d="M58 156H1142" stroke="#303030"/>
   <text x="58" y="183" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8" letter-spacing="1.2">PRIMARY LANGUAGE</text>
   <text id="language" x="58" y="208" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="15">JavaScript</text>

@@ -28,8 +28,9 @@ jobs:
       - name: Refresh profile SVGs
         run: python scripts/update_profile.py
         env:
+          GH_PAT: ${{ secrets.GH_PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PROFILE_USERNAME: inuisaat-crypto
+          PROFILE_USERNAME: Fall1ar
           OMNI_REPOSITORY: Fall1ar/Omni
 
       - name: Commit refreshed graphics

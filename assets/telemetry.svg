@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Live telemetry and uptime</title>
-  <desc id="desc">Profile status, account age, public repository count, and commits over the last year. Updated by GitHub Actions.</desc>
+  <desc id="desc">Profile status, account age, public repository count, and contributions over the last year, including restricted contributions when authorized. Updated by GitHub Actions.</desc>
   <defs>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#FFFFFF" stroke-opacity=".05"/></pattern>
     <style>
@@ -19,12 +19,12 @@
   <text x="36" y="118" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="17">STATUS: ONLINE</text>
   <path d="M36 138H564" stroke="#303030"/>
   <text x="36" y="174" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">ACCOUNT UPTIME</text>
-  <text id="uptime" x="36" y="224" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="34">36</text>
+  <text id="uptime" x="36" y="224" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="34">1,142</text>
   <text x="36" y="252" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10">DAYS SINCE REGISTRATION</text>
   <path d="M294 158V270" stroke="#303030"/>
   <text x="324" y="174" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">PUBLIC REPOSITORIES</text>
-  <text id="repositories" x="324" y="218" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="30">1</text>
+  <text id="repositories" x="324" y="218" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="30">3</text>
   <path d="M324 234H564" stroke="#303030"/>
-  <text x="324" y="258" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">COMMITS / 12 MONTHS</text>
-  <text id="commits" x="324" y="284" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="20">0</text>
+  <text x="324" y="258" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">CONTRIBUTIONS / 12 MONTHS</text>
+  <text id="contributions" x="324" y="284" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="20">26</text>
 </svg>

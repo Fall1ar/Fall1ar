@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="assets/header.svg" alt="inuisaat-crypto — monochrome industrial profile interface" width="100%" />
+  <img src="assets/header.svg" alt="Fall1ar — monochrome industrial profile interface" width="100%" />
 </div>
 
 <div align="center">
-  <img src="assets/telemetry.svg" alt="Live telemetry: account status, uptime, public repository count, and commits in the past year" width="49%" />
+  <img src="assets/telemetry.svg" alt="Live telemetry: account status, account age, public repository count, and yearly GitHub contributions" width="49%" />
   <img src="assets/stack.svg" alt="Core stack circuit diagram: Python, Rust, Tauri v2, JavaScript, HTML and CSS, and Git" width="49%" />
 </div>
 
@@ -14,7 +14,7 @@
 </div>
 
 <div align="center">
-  <img src="assets/pulse.svg" alt="Animated commit activity waveform for the last 60 days, generated from public GitHub commits" width="100%" />
+  <img src="assets/pulse.svg" alt="Animated GitHub contribution activity waveform for the last 60 days, including restricted contributions when authorized" width="100%" />
 </div>
 
 <div align="center">
