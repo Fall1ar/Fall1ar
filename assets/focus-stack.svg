@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Focus and stack</title>
+  <desc id="desc">Four monochrome interface modules for focus, frameworks, languages, and web technologies.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#FFFFFF" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="270" fill="#000000"/>
+  <rect width="1200" height="270" fill="url(#grid)"/>
+  <rect x="20.5" y="18.5" width="1159" height="233" stroke="#30363D"/>
+  <path d="M42 54H1158" stroke="#30363D"/>
+  <text x="44" y="43" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="12" letter-spacing="2">SYSTEM MAP  /  FOCUS + STACK</text>
+  <text x="1156" y="43" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">01—04  /  MODULES</text>
+  <g>
+    <rect x="42.5" y="76.5" width="268" height="148" fill="#0D1117" stroke="#30363D"/>
+    <text x="60" y="104" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">01 / FOCUS</text>
+    <text x="60" y="143" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="17">Local-first tools</text>
+    <text x="60" y="174" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Desktop systems</text>
+    <text x="60" y="195" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="10">Automation / plugins</text>
+  </g>
+  <g>
+    <rect x="326.5" y="76.5" width="268" height="148" fill="#0D1117" stroke="#30363D"/>
+    <text x="344" y="104" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">02 / DESKTOP</text>
+    <text x="344" y="143" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="17">Tauri v2</text>
+    <text x="344" y="174" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Rust core / Windows</text>
+    <path d="M344 195H548" stroke="#30363D"/>
+    <circle cx="564" cy="195" r="2" fill="#FFFFFF"/>
+  </g>
+  <g>
+    <rect x="610.5" y="76.5" width="268" height="148" fill="#0D1117" stroke="#30363D"/>
+    <text x="628" y="104" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">03 / LANGUAGES</text>
+    <text x="628" y="143" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="15">Rust / JavaScript</text>
+    <text x="628" y="174" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Python workers</text>
+    <text x="628" y="195" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="10">HTML / CSS</text>
+  </g>
+  <g>
+    <rect x="894.5" y="76.5" width="263" height="148" fill="#0D1117" stroke="#30363D"/>
+    <text x="912" y="104" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10" letter-spacing="1.5">04 / INTEGRATION</text>
+    <text x="912" y="143" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="15">JSON Lines</text>
+    <text x="912" y="174" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Python plugin SDK</text>
+    <text x="912" y="195" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="10">Browser localStorage</text>
+  </g>
+  <path d="M42 238H72M1128 238H1158" stroke="#777777"/>
+  <circle cx="86" cy="238" r="2" fill="#FFFFFF"/>
+  <circle cx="1114" cy="238" r="2" fill="#FFFFFF"/>
+</svg>
