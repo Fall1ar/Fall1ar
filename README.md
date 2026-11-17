@@ -1,56 +1,65 @@
-<h1 align="center">Hi there, I'm <a href="https://github.com/Fall1ar" target="_blank">Fall1ar</a> 👋</h1>
+<div align="center">
+  <img src="assets/banner.svg" alt="Fall1ar — building useful tools, thoughtful interfaces and automation" width="100%" />
+</div>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Fall1ar&color=blueviolet&style=flat-square" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/Fall1ar?label=Followers&style=flat-square&color=blueviolet" alt="GitHub Followers" />
-</p>
+<div align="center">
+  <a href="https://github.com/Fall1ar">GitHub profile</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/Fall1ar?tab=repositories">Repositories</a>
+</div>
 
-<p align="center">
-  <em>⚡ Building clean, minimalist tools and automation scripts.</em>
-</p>
+<br />
 
----
+### About / Focus
 
-### 💻 Tech Stack & Tools
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>01 — Build</strong><br />
+      Practical software and small tools that solve real problems.
+    </td>
+    <td width="50%" valign="top">
+      <strong>02 — Design</strong><br />
+      Clear interfaces, thoughtful details, and useful user experiences.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>03 — Automate</strong><br />
+      Python, connected devices, and LEGO SPIKE robotics.
+    </td>
+    <td width="50%" valign="top">
+      <strong>04 — Explore</strong><br />
+      Android, Java, Kotlin, and the space between hardware and software.
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <!-- Языки -->
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-  
-  <!-- Инструменты и Среда -->
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
-</p>
+### Tech Stack
 
----
+<div>
+  <img src="https://img.shields.io/badge/Python-151B23?style=flat-square&logo=python&logoColor=00F0D0" alt="Python" />
+  <img src="https://img.shields.io/badge/Java-151B23?style=flat-square&logo=openjdk&logoColor=00F0D0" alt="Java" />
+  <img src="https://img.shields.io/badge/Android%20%2F%20Kotlin-151B23?style=flat-square&logo=android&logoColor=00F0D0" alt="Android and Kotlin" />
+  <img src="https://img.shields.io/badge/Git-151B23?style=flat-square&logo=git&logoColor=00F0D0" alt="Git" />
+  <img src="https://img.shields.io/badge/VS%20Code-151B23?style=flat-square&logo=visualstudiocode&logoColor=00F0D0" alt="VS Code" />
+  <img src="https://img.shields.io/badge/UI%2FUX%20Design-151B23?style=flat-square&logo=figma&logoColor=00F0D0" alt="UI/UX Design" />
+  <img src="https://img.shields.io/badge/LEGO%20SPIKE%20%2F%20Automation-151B23?style=flat-square&logoColor=00F0D0" alt="LEGO SPIKE and automation" />
+</div>
 
-### 📊 GitHub Stats
+### GitHub Stats
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Fall1ar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=Fall1ar&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="https://github-readme-stats.vercel.app/api?username=Fall1ar&show_icons=true&hide_border=true&bg_color=0B0F14&title_color=00F0D0&text_color=AAB6C2&icon_color=00F0D0&ring_color=00F0D0" alt="GitHub stats for Fall1ar" />
+    </td>
+    <td width="50%" align="center">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fall1ar&hide_border=true&background=0B0F14&ring=00F0D0&fire=00F0D0&currStreakLabel=00F0D0&sideLabels=AAB6C2&dates=72808D&stroke=151B23" alt="GitHub contribution streak for Fall1ar" />
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fall1ar&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
-
----
-
-### 🚀 Featured Projects
-
-| Project | Description | Tech |
-| :--- | :--- | :--- |
-| **[Project Name](https://github.com/your-username/repo)** | Краткое и крутое описание того, что делает проект. | `Python` `API` |
-| **[Another Project](https://github.com/your-username/repo)** | Еще один классный пет-проект с упором на чистый UI/UX. | `JavaScript` `HTML/CSS` |
-
----
-
-<p align="center">
-  <sub>✨ Crafted with passion and code. Keep building.</sub>
-</p>
+<div align="center">
+  <sub>Tools with purpose. Interfaces with intent.</sub>
+</div>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Fall1ar — tools, automation, and thoughtful interfaces</title>
+  <desc id="desc">A dark geometric banner with a subtle animated cyan signal line.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0F14"/>
+      <stop offset="1" stop-color="#111923"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="660" y1="250" x2="1100" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F0D0" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#00F0D0"/>
+      <stop offset="1" stop-color="#70FFF0" stop-opacity=".16"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#90A4B8" stroke-opacity=".075"/>
+    </pattern>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(250 0 0 180 970 155)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F0D0" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#00F0D0" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .pulse { animation: pulse 5s ease-in-out infinite; }
+      .drift { animation: drift 8s ease-in-out infinite; }
+      @keyframes pulse { 0%, 100% { opacity: .48; } 50% { opacity: 1; } }
+      @keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-12px); } }
+      @media (prefers-reduced-motion: reduce) {
+        .pulse, .drift { animation: none; }
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="360" rx="20" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="20" fill="url(#grid)"/>
+  <rect width="1200" height="360" rx="20" fill="url(#glow)"/>
+  <path d="M0 300H1200" stroke="#90A4B8" stroke-opacity=".12"/>
+  <g class="drift">
+    <path d="M660 252H765L813 204H886L928 162H1014L1062 114H1200" stroke="url(#signal)" stroke-width="2"/>
+    <path d="M660 252H765L813 204H886L928 162H1014L1062 114H1200" stroke="#00F0D0" stroke-opacity=".18" stroke-width="12" class="pulse"/>
+    <circle cx="813" cy="204" r="4" fill="#00F0D0" class="pulse"/>
+    <circle cx="928" cy="162" r="4" fill="#00F0D0" class="pulse"/>
+    <circle cx="1062" cy="114" r="4" fill="#00F0D0" class="pulse"/>
+  </g>
+  <path d="M72 72H104" stroke="#00F0D0" stroke-width="3"/>
+  <text x="72" y="156" fill="#F3F6F8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="46" font-weight="650" letter-spacing="-1.2">Fall1ar</text>
+  <text x="74" y="198" fill="#AAB6C2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" letter-spacing=".15">Building useful tools, thoughtful interfaces &amp; automation.</text>
+  <text x="74" y="310" fill="#00F0D0" font-family="Consolas,Monaco,monospace" font-size="12" letter-spacing="2">SOFTWARE  /  DESIGN  /  ROBOTICS</text>
+  <text x="1128" y="310" text-anchor="end" fill="#72808D" font-family="Consolas,Monaco,monospace" font-size="12">BUILD 01 — PRESENT</text>
+</svg>
