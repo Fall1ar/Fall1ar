@@ -1,8 +1,8 @@
-<h1 align="center">Hi there, I'm <a href="https://github.com/your-username" target="_blank">Your Name</a> 👋</h1>
+<h1 align="center">Hi there, I'm <a href="https://github.com/Fall1ar" target="_blank">Fall1ar</a> 👋</h1>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=your-username&color=blueviolet&style=flat-square" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/your-username?label=Followers&style=flat-square&color=blueviolet" alt="GitHub Followers" />
+  <img src="https://komarev.com/ghpvc/?username=Fall1ar&color=blueviolet&style=flat-square" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/Fall1ar?label=Followers&style=flat-square&color=blueviolet" alt="GitHub Followers" />
 </p>
 
 <p align="center">
@@ -32,12 +32,12 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=your-username&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Fall1ar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=Fall1ar&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fall1ar&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </p>
 
 ---
