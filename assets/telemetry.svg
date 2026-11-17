@@ -26,5 +26,5 @@
   <text id="repositories" x="324" y="218" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="30">3</text>
   <path d="M324 234H564" stroke="#303030"/>
   <text x="324" y="258" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">CONTRIBUTIONS / 12 MONTHS</text>
-  <text id="contributions" x="324" y="284" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="20">26</text>
+  <text id="contributions" x="324" y="284" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="20">27</text>
 </svg>
