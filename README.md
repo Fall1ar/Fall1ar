@@ -52,10 +52,10 @@
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=Fall1ar&show_icons=true&hide_border=true&bg_color=0B0F14&title_color=00F0D0&text_color=AAB6C2&icon_color=00F0D0&ring_color=00F0D0" alt="GitHub stats for Fall1ar" />
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Fall1ar&theme=github_dark" alt="GitHub stats for Fall1ar" />
     </td>
     <td width="50%" align="center">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fall1ar&hide_border=true&background=0B0F14&ring=00F0D0&fire=00F0D0&currStreakLabel=00F0D0&sideLabels=AAB6C2&dates=72808D&stroke=151B23" alt="GitHub contribution streak for Fall1ar" />
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fall1ar&hide_border=true&background=0D1117&ring=00F0D0&fire=00F0D0&currStreakLabel=00F0D0&sideLabels=AAB6C2&dates=72808D&stroke=151B23" alt="GitHub contribution streak for Fall1ar" />
     </td>
   </tr>
 </table>
