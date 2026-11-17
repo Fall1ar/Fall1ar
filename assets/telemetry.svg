@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Live telemetry and uptime</title>
+  <desc id="desc">Profile status, account age, public repository count, and commits over the last year. Updated by GitHub Actions.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#FFFFFF" stroke-opacity=".05"/></pattern>
+    <style>
+      .online { animation: online 2.4s ease-in-out infinite; }
+      @keyframes online { 50% { opacity: .35; } }
+      @media (prefers-reduced-motion: reduce) { .online { animation: none; } }
+    </style>
+  </defs>
+  <rect width="600" height="320" fill="#000000"/>
+  <rect width="600" height="320" fill="url(#grid)"/>
+  <rect x="16.5" y="16.5" width="567" height="287" stroke="#303030"/>
+  <path d="M34 54H566" stroke="#303030"/>
+  <text x="36" y="42" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="11" letter-spacing="1.5">LIVE TELEMETRY  /  UPTIME</text>
+  <circle class="online" cx="548" cy="37" r="4" fill="#FFFFFF"/>
+  <text x="36" y="88" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.5">ACCOUNT STATUS</text>
+  <text x="36" y="118" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="17">STATUS: ONLINE</text>
+  <path d="M36 138H564" stroke="#303030"/>
+  <text x="36" y="174" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">ACCOUNT UPTIME</text>
+  <text id="uptime" x="36" y="224" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="34">36</text>
+  <text x="36" y="252" fill="#888888" font-family="Consolas,Menlo,monospace" font-size="10">DAYS SINCE REGISTRATION</text>
+  <path d="M294 158V270" stroke="#303030"/>
+  <text x="324" y="174" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">PUBLIC REPOSITORIES</text>
+  <text id="repositories" x="324" y="218" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="30">1</text>
+  <path d="M324 234H564" stroke="#303030"/>
+  <text x="324" y="258" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">COMMITS / 12 MONTHS</text>
+  <text id="commits" x="324" y="284" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="20">0</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="64" viewBox="0 0 1200 64" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Profile footer — build 01</title>
+  <desc id="desc">Monochrome system footer with coordinate markers and blinking cursor.</desc>
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" stroke="#FFFFFF" stroke-opacity=".05"/></pattern>
+    <style>
+      .cursor { animation: blink 1s steps(2, start) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+    </style>
+  </defs>
+  <rect width="1200" height="64" fill="#000000"/>
+  <rect width="1200" height="64" fill="url(#grid)"/>
+  <path d="M20 6H1180M20 58H1180" stroke="#303030"/>
+  <path d="M20 6V16M1180 6V16M20 48V58M1180 48V58" stroke="#FFFFFF" stroke-opacity=".5"/>
+  <text x="34" y="39" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">GRID  /  32 × 32</text>
+  <text x="600" y="39" text-anchor="middle" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1.2">PROFILE BUILD  /  01</text>
+  <text x="1166" y="39" text-anchor="end" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="10">READY<tspan class="cursor">_</tspan></text>
+</svg>

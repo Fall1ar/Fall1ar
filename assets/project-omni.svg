@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Active blueprint — Omni</title>
+  <desc id="desc">Repository metadata for Omni: description, language, default branch, and latest commit.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#FFFFFF" stroke-opacity=".05"/></pattern>
+    <style>
+      .activity { animation: activity 2s ease-in-out infinite; }
+      @keyframes activity { 50% { opacity: .25; } }
+      @media (prefers-reduced-motion: reduce) { .activity { animation: none; } }
+    </style>
+  </defs>
+  <rect width="1200" height="330" fill="#000000"/>
+  <rect width="1200" height="330" fill="url(#grid)"/>
+  <rect x="20.5" y="18.5" width="1159" height="293" stroke="#303030"/>
+  <path d="M42 54H1158M42 260H1158" stroke="#303030"/>
+  <text x="44" y="42" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="11" letter-spacing="1.7">ACTIVE BLUEPRINT  /  OMNI</text>
+  <circle class="activity" cx="1140" cy="37" r="4" fill="#FFFFFF"/>
+  <text x="56" y="104" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="28">Omni</text>
+  <text id="description" x="58" y="132" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="11">Local desktop plugin manager built with Tauri v2, Rust, vanilla HTML/CSS/JavaScript, and Python worker plugins.</text>
+  <path d="M58 156H1142" stroke="#303030"/>
+  <text x="58" y="183" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8" letter-spacing="1.2">PRIMARY LANGUAGE</text>
+  <text id="language" x="58" y="208" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="15">JavaScript</text>
+  <text x="330" y="183" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8" letter-spacing="1.2">DEFAULT BRANCH</text>
+  <text id="branch" x="330" y="208" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="15">main</text>
+  <text x="58" y="238" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8" letter-spacing="1.2">LATEST COMMIT</text>
+  <text id="commit-date" x="330" y="238" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="10">2026-11-03 UTC</text>
+  <text id="commit-message" x="58" y="289" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="10">feat: add new Studio and Workbench themes with separate layouts and navigation</text>
+  <text x="1142" y="289" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8" letter-spacing="1">REPOSITORY SIGNAL</text>
+</svg>
