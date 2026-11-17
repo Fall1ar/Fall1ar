@@ -9,23 +9,25 @@
       <circle cx="1" cy="1" r=".65" fill="#FFFFFF" fill-opacity=".09"/>
     </pattern>
     <style>
+      .frame { animation: framePulse 5s ease-in-out infinite; }
       .coordinate { animation: breathe 6s ease-in-out infinite; }
       .radar { transform-box: view-box; transform-origin: 1000px 176px; animation: orbit 24s linear infinite; }
       .frame-run { stroke-dasharray: 52 2856; animation: perimeter 12s linear infinite; }
       .cursor { animation: blink 1.2s steps(2, start) infinite; }
+      @keyframes framePulse { 0%, 100% { stroke-opacity: .3; } 50% { stroke-opacity: .72; } }
       @keyframes breathe { 0%, 100% { opacity: .16; } 50% { opacity: .52; } }
       @keyframes orbit { to { transform: rotate(360deg); } }
       @keyframes perimeter { to { stroke-dashoffset: -2908; } }
       @keyframes blink { 50% { opacity: 0; } }
       @media (prefers-reduced-motion: reduce) {
-        .coordinate, .radar, .frame-run, .cursor { animation: none; }
+        .frame, .coordinate, .radar, .frame-run, .cursor { animation: none; }
       }
     </style>
   </defs>
   <rect width="1200" height="360" fill="#000000"/>
   <rect width="1200" height="360" fill="url(#grid)"/>
   <rect width="1200" height="360" fill="url(#fine)" opacity=".25"/>
-  <rect x="28.5" y="24.5" width="1143" height="311" stroke="#FFFFFF" stroke-opacity=".42"/>
+  <rect class="frame" x="28.5" y="24.5" width="1143" height="311" stroke="#FFFFFF" stroke-opacity=".42"/>
   <rect class="frame-run" x="28.5" y="24.5" width="1143" height="311" stroke="#FFFFFF" stroke-width="1.5"/>
   <path d="M48 54V42H72M1128 42H1152V66M48 294V318H72M1128 318H1152V294" stroke="#FFFFFF" stroke-width="1"/>
   <path d="M48 78H1152M48 280H1152" stroke="#FFFFFF" stroke-opacity=".18"/>

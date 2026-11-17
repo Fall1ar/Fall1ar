@@ -9,18 +9,20 @@
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
     <style>
+      .frame { animation: framePulse 5s ease-in-out infinite; }
       .trace { stroke-dasharray: 1800 1800; stroke-dashoffset: 1800; animation: trace 5s ease-out forwards; }
-      .scanner { animation: scan 8s linear infinite; }
+      .scanner { transform-box: view-box; animation: scan 8s linear infinite; }
       .peak { animation: peak 1.8s ease-in-out infinite; }
+      @keyframes framePulse { 0%, 100% { stroke-opacity: .3; } 50% { stroke-opacity: .72; } }
       @keyframes trace { to { stroke-dashoffset: 0; } }
       @keyframes scan { to { transform: translateX(1040px); } }
       @keyframes peak { 50% { opacity: .35; } }
-      @media (prefers-reduced-motion: reduce) { .trace, .scanner, .peak { animation: none; stroke-dashoffset: 0; } }
+      @media (prefers-reduced-motion: reduce) { .frame, .trace, .scanner, .peak { animation: none; stroke-dashoffset: 0; } }
     </style>
   </defs>
   <rect width="1200" height="360" fill="#000000"/>
   <rect width="1200" height="360" fill="url(#grid)"/>
-  <rect x="20.5" y="18.5" width="1159" height="323" stroke="#303030"/>
+  <rect class="frame" x="20.5" y="18.5" width="1159" height="323" stroke="#303030"/>
   <path d="M42 58H1158M42 300H1158" stroke="#303030"/>
   <text x="44" y="44" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="11" letter-spacing="1.7">CONTRIBUTION PULSE  /  60-DAY WINDOW</text>
   <text id="total" x="1156" y="44" text-anchor="end" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1">CONTRIBUTIONS / 16</text>

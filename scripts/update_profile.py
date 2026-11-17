@@ -35,6 +35,32 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 }
 """
 OMNI_DESCRIPTION = "No repository description set."
+ANIMATION_REQUIREMENTS = {
+    "header.svg": (
+        'class="frame"',
+        'class="radar"',
+        "@keyframes framePulse",
+        "@keyframes orbit",
+    ),
+    "pulse.svg": (
+        'class="frame"',
+        'class="trace"',
+        'class="scanner"',
+        "@keyframes framePulse",
+        "@keyframes trace",
+        "@keyframes scan",
+    ),
+    "telemetry.svg": (
+        'class="frame"',
+        "@keyframes framePulse",
+        "@keyframes online",
+    ),
+    "project-omni.svg": (
+        'class="frame"',
+        "@keyframes framePulse",
+        "@keyframes activity",
+    ),
+}
 
 
 class GitHubAPIError(RuntimeError):
@@ -44,6 +70,20 @@ class GitHubAPIError(RuntimeError):
         super().__init__(
             "GitHub API returned HTTP {} for {}: {}".format(
                 status_code, path, detail
+            )
+        )
+
+
+def validate_animation_styles(svg, filename):
+    missing = [
+        requirement
+        for requirement in ANIMATION_REQUIREMENTS[filename]
+        if requirement not in svg
+    ]
+    if missing:
+        raise ValueError(
+            "{} is missing required animation CSS: {}".format(
+                filename, ", ".join(missing)
             )
         )
 
@@ -211,6 +251,7 @@ def write_telemetry(account_age, repository_count, contributions_year):
     svg = replace_svg_text(
         svg, "contributions", "{:,}".format(contributions_year)
     )
+    validate_animation_styles(svg, path.name)
     with path.open("w", encoding="utf-8") as output:
         output.write(svg)
 
@@ -242,6 +283,7 @@ def write_project(repo, latest_commit):
     svg = replace_svg_text(svg, "branch", branch)
     svg = replace_svg_text(svg, "commit-date", commit_date)
     svg = replace_svg_lines(svg, "commit-message", message, 145)
+    validate_animation_styles(svg, path.name)
     with path.open("w", encoding="utf-8") as output:
         output.write(svg)
 
@@ -308,11 +350,15 @@ def write_pulse(daily_contributions, today):
     )
     svg = replace_svg_text(svg, "start-date", start_date.strftime("%d %b %Y"))
     svg = replace_svg_text(svg, "end-date", today.strftime("%d %b %Y"))
+    validate_animation_styles(svg, path.name)
     with path.open("w", encoding="utf-8") as output:
         output.write(svg)
 
 
 def main():
+    header = (ASSETS / "header.svg").read_text(encoding="utf-8")
+    validate_animation_styles(header, "header.svg")
+
     token = os.environ.get("GH_PAT") or os.environ.get("GITHUB_TOKEN")
     if not token:
         raise RuntimeError("GH_PAT or GITHUB_TOKEN is required to update profile assets")
