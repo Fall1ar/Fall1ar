@@ -10,31 +10,79 @@
 
 <br />
 
+<hr />
+
 ### 01 / Focus
 
-| AREA | APPROACH |
-|:--|:--|
-| **Desktop systems** | Local-first utilities with clear, deliberate interfaces. |
-| **Automation** | Small tools and plugin workflows that reduce repetitive work. |
-| **Experiments** | Turning early ideas into usable, self-contained software. |
+<table width="100%" cellpadding="10" cellspacing="0">
+  <tr>
+    <th width="24%" align="left">AREA</th>
+    <th align="left">APPROACH</th>
+  </tr>
+  <tr>
+    <td><strong>Desktop systems</strong></td>
+    <td>Local-first utilities with clear, deliberate interfaces.</td>
+  </tr>
+  <tr>
+    <td><strong>Automation</strong></td>
+    <td>Small tools and plugin workflows that reduce repetitive work.</td>
+  </tr>
+  <tr>
+    <td><strong>Experiments</strong></td>
+    <td>Turning early ideas into usable, self-contained software.</td>
+  </tr>
+</table>
+
+<hr />
 
 ### 02 / Project index
 
-| PROJECT | OVERVIEW | STACK |
-|:--|:--|:--|
-| [**Omni**](https://github.com/Fall1ar/Omni) | A local desktop plugin manager. Its Tauri core manages plugins and processes; Python workers communicate over JSON Lines. | `Tauri v2` · `Rust` · `JavaScript` · `Python` |
-| [**IDEA DECK**](https://github.com/Fall1ar/dev-ideas) | An offline-first idea board for organizing cards, breaking work into steps, tracking progress, and moving data through JSON import/export. | `JavaScript` · `HTML` · `CSS` · `localStorage` |
+<table width="100%" cellpadding="10" cellspacing="0">
+  <tr>
+    <th width="18%" align="left">PROJECT</th>
+    <th width="60%" align="left">OVERVIEW</th>
+    <th width="22%" align="left">STACK</th>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Fall1ar/Omni"><strong>Omni</strong></a></td>
+    <td>A local desktop plugin manager. Its Tauri core manages plugins and processes; Python workers communicate over JSON Lines.</td>
+    <td><code>Tauri v2</code> · <code>Rust</code> · <code>JavaScript</code> · <code>Python</code></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Fall1ar/dev-ideas"><strong>IDEA DECK</strong></a></td>
+    <td>An offline-first idea board for organizing cards, breaking work into steps, tracking progress, and moving data through JSON import/export.</td>
+    <td><code>JavaScript</code> · <code>HTML</code> · <code>CSS</code> · <code>localStorage</code></td>
+  </tr>
+</table>
+
+<hr />
 
 ### 03 / Stack
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Tauri_v2-0D1117?style=flat-square&logo=tauri&logoColor=FFFFFF" alt="Tauri v2" />
-  <img src="https://img.shields.io/badge/Rust-0D1117?style=flat-square&logo=rust&logoColor=FFFFFF" alt="Rust" />
-  <img src="https://img.shields.io/badge/JavaScript-0D1117?style=flat-square&logo=javascript&logoColor=FFFFFF" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Python-0D1117?style=flat-square&logo=python&logoColor=FFFFFF" alt="Python" />
-  <img src="https://img.shields.io/badge/HTML-0D1117?style=flat-square&logo=html5&logoColor=FFFFFF" alt="HTML" />
-  <img src="https://img.shields.io/badge/CSS-0D1117?style=flat-square&logo=css3&logoColor=FFFFFF" alt="CSS" />
-</div>
+<table width="100%" cellpadding="12" cellspacing="8">
+  <tr>
+    <td width="50%" valign="top">
+      <strong>LANGUAGES</strong><br />
+      <sub>Rust &nbsp; / &nbsp; JavaScript &nbsp; / &nbsp; Python</sub>
+    </td>
+    <td width="50%" valign="top">
+      <strong>FRAMEWORKS</strong><br />
+      <sub>Tauri v2</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>WEB</strong><br />
+      <sub>HTML &nbsp; / &nbsp; CSS &nbsp; / &nbsp; localStorage</sub>
+    </td>
+    <td width="50%" valign="top">
+      <strong>INTEGRATION</strong><br />
+      <sub>Python plugins &nbsp; / &nbsp; JSON Lines</sub>
+    </td>
+  </tr>
+</table>
+
+<hr />
 
 ### 04 / GitHub activity
 
