@@ -25,20 +25,25 @@
   <rect class="frame" x="20.5" y="18.5" width="1159" height="323" stroke="#303030"/>
   <path d="M42 58H1158M42 300H1158" stroke="#303030"/>
   <text x="44" y="44" fill="#FFFFFF" font-family="Consolas,Menlo,monospace" font-size="11" letter-spacing="1.7">CONTRIBUTION PULSE  /  60-DAY WINDOW</text>
-  <text id="total" x="1156" y="44" text-anchor="end" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1">CONTRIBUTIONS / 20</text>
+  <text id="total" x="1156" y="44" text-anchor="end" fill="#B3B3B3" font-family="Consolas,Menlo,monospace" font-size="9" letter-spacing="1">CONTRIBUTIONS / 28</text>
   <path d="M80 88V276M340 88V276M600 88V276M860 88V276M1120 88V276" stroke="#FFFFFF" stroke-opacity=".1" stroke-dasharray="2 6"/>
   <path d="M80 108H1120M80 150H1120M80 192H1120M80 234H1120M80 276H1120" stroke="#FFFFFF" stroke-opacity=".1"/>
   <text x="54" y="112" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8">HIGH</text>
   <text x="54" y="280" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="8">BASE</text>
-  <path id="waveform" class="trace" d="M80.0 250.0L80.0 250.0L97.6 250.0L115.3 250.0L132.9 250.0L150.5 250.0L168.1 250.0L185.8 250.0L203.4 250.0L221.0 250.0L238.6 239.1L256.3 250.0L273.9 250.0L291.5 250.0L309.2 250.0L326.8 250.0L344.4 250.0L362.0 250.0L379.7 250.0L397.3 250.0L414.9 250.0L432.5 250.0L450.2 250.0L467.8 250.0L485.4 250.0L503.1 250.0L520.7 250.0L538.3 250.0L555.9 250.0L573.6 250.0L591.2 250.0L608.8 250.0L626.4 250.0L644.1 250.0L661.7 250.0L679.3 250.0L696.9 250.0L714.6 250.0L732.2 217.2L749.8 250.0L767.5 250.0L785.1 250.0L802.7 250.0L820.3 250.0L838.0 250.0L855.6 250.0L873.2 250.0L890.8 250.0L908.5 250.0L926.1 250.0L943.7 250.0L961.4 250.0L979.0 108.0L996.6 217.2L1014.2 250.0L1031.9 250.0L1049.5 250.0L1067.1 250.0L1084.7 250.0L1102.4 250.0L1120.0 250.0" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+  <path id="waveform" class="trace" d="M80.0 250.0L80.0 250.0L97.6 250.0L115.3 250.0L132.9 250.0L150.5 250.0L168.1 250.0L185.8 250.0L203.4 250.0L221.0 239.1L238.6 250.0L256.3 250.0L273.9 250.0L291.5 250.0L309.2 250.0L326.8 250.0L344.4 250.0L362.0 250.0L379.7 250.0L397.3 250.0L414.9 250.0L432.5 250.0L450.2 250.0L467.8 250.0L485.4 250.0L503.1 250.0L520.7 250.0L538.3 250.0L555.9 250.0L573.6 250.0L591.2 250.0L608.8 250.0L626.4 250.0L644.1 250.0L661.7 250.0L679.3 250.0L696.9 250.0L714.6 217.2L732.2 250.0L749.8 250.0L767.5 250.0L785.1 250.0L802.7 250.0L820.3 250.0L838.0 250.0L855.6 250.0L873.2 250.0L890.8 250.0L908.5 250.0L926.1 250.0L943.7 250.0L961.4 108.0L979.0 195.4L996.6 250.0L1014.2 239.1L1031.9 239.1L1049.5 239.1L1067.1 228.2L1084.7 250.0L1102.4 250.0L1120.0 239.1" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
   <g class="scanner">
     <rect x="80" y="88" width="34" height="188" fill="url(#scan)"/>
     <path d="M97 88V276" stroke="#FFFFFF" stroke-opacity=".5"/>
   </g>
-  <g id="peak-markers"><circle class="peak" cx="238.6" cy="239.1" r="3" fill="#FFFFFF"/>
-  <circle class="peak" cx="732.2" cy="217.2" r="5" fill="#FFFFFF"/>
-  <circle class="peak" cx="979.0" cy="108.0" r="6" fill="#FFFFFF"/>
-  <circle class="peak" cx="996.6" cy="217.2" r="5" fill="#FFFFFF"/></g>
-  <text id="start-date" x="80" y="321" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9">27 Sep 2026</text>
-  <text id="end-date" x="1120" y="321" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9">25 Nov 2026</text>
+  <g id="peak-markers"><circle class="peak" cx="221.0" cy="239.1" r="3" fill="#FFFFFF"/>
+  <circle class="peak" cx="714.6" cy="217.2" r="5" fill="#FFFFFF"/>
+  <circle class="peak" cx="961.4" cy="108.0" r="6" fill="#FFFFFF"/>
+  <circle class="peak" cx="979.0" cy="195.4" r="6" fill="#FFFFFF"/>
+  <circle class="peak" cx="1014.2" cy="239.1" r="3" fill="#FFFFFF"/>
+  <circle class="peak" cx="1031.9" cy="239.1" r="3" fill="#FFFFFF"/>
+  <circle class="peak" cx="1049.5" cy="239.1" r="3" fill="#FFFFFF"/>
+  <circle class="peak" cx="1067.1" cy="228.2" r="4" fill="#FFFFFF"/>
+  <circle class="peak" cx="1120.0" cy="239.1" r="3" fill="#FFFFFF"/></g>
+  <text id="start-date" x="80" y="321" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9">28 Sep 2026</text>
+  <text id="end-date" x="1120" y="321" text-anchor="end" fill="#777777" font-family="Consolas,Menlo,monospace" font-size="9">26 Nov 2026</text>
 </svg>
